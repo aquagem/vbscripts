@@ -82,5 +82,5 @@ Public Function fn_mergeFiles(folderPath,fileExtension)
 	
 	On Error Goto 0
 	endTime = Now()
-	Msgbox "Time taken to extract and load "&file_count&" files into Access DB: "&DateDiff("s", startTime, endTime)&" seconds"
+	Msgbox "Time taken to extract and load "&file_count&" files: "&DateDiff("s", startTime, endTime)&" seconds"
 End Function
