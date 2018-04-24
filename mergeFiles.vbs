@@ -1,3 +1,4 @@
+'Just Testing
 'Sample Function Call:
 'Call fn_mergeFiles("C:\temp1","txt")
 
