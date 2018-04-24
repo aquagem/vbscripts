@@ -1,3 +1,6 @@
+'Sample Function Call'
+'Call accessDb_operations("C:\temp","TestDB.accdb","INSERT INTO TABLE VALUES(col1,col2,col3)")
+
 Public Function accessDb_operations(accessDB_Path,DB_NAME,sql)
 	'This function is used to insert records into the Access DB'
 	On Error Resume Next
@@ -10,7 +13,6 @@ Public Function accessDb_operations(accessDB_Path,DB_NAME,sql)
 		Dim rs
 	'Variable Declaration End'
 	
-'	connStr = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=D:\DATA\TIC_FILE_DB_V1.0.accdb"
 	connStr = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source="&accessDB_Path&"\"&DB_NAME
 	
 	'Define object type
@@ -28,6 +30,6 @@ Public Function accessDb_operations(accessDB_Path,DB_NAME,sql)
 		MsgBox "SQL executed successfully"
 	End If
 	
-	'objConn.Close 
-	'Set objConn = Nothing
+	objConn.Close 
+	Set objConn = Nothing
 End Function
